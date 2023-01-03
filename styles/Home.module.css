@@ -1,0 +1,125 @@
+.mobileHeaderF {
+  font-size: 16px;
+  color: #d0d6f9;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr;
+  background-image: url(/assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* CONTENT STYLES */
+
+.contentGrid {
+  grid-area: 2 / 1 / -1 / -1;
+  display: grid;
+  grid-template-areas:
+    "alias-intro"
+    "alias-aside";
+}
+
+.contentGrid p {
+  width: 80%;
+  line-height: 2rem;
+}
+
+.projectIntro {
+  grid-area: alias-intro;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  padding: 2rem;
+}
+
+.aside {
+  grid-area: alias-aside;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeMainButton {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  padding: 4rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: center;
+  height: 100px;
+  width: 100px;
+  transition: border 1s;
+}
+
+@media screen and (min-width: 768px) {
+  .mainContainer {
+    background-image: url(/assets/home/background-home-tablet.jpg);
+  }
+
+  .mainContainer p {
+    max-width: 440px;
+  }
+
+  .projectIntro {
+    margin: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mainContainer {
+    background-image: url(/assets/home/background-home-desktop.jpg);
+    grid-template-rows: 170px 1fr;
+    overflow: hidden;
+  }
+
+  .mobileHeaderF {
+    font-size: 28px;
+    margin-right: 3rem;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 5%;
+  }
+
+  .projectIntro {
+    justify-content: end;
+    margin: 0;
+    margin-bottom: 22%;
+  }
+
+  .projectIntro * {
+    margin-bottom: 2.5rem;
+  }
+
+  .aside {
+    grid-area: 1 / 2 / -1 / 3;
+    margin-bottom: 29%;
+    align-self: flex-end;
+  }
+
+  .homeMainButton {
+    width: 150px;
+    height: 150px;
+  }
+
+  .homeMainButton:hover {
+    border: 2.5rem solid #24262fd0;
+    opacity: 0.93;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,153 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.header svg {
+  transition: transform 0.8s;
+}
+
+.header svg:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+.deskBar {
+  display: none;
+}
+
+.topBar {
+  grid-area: 1 / 1 / 2 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.navBar {
+  backdrop-filter: blur(40px);
+  width: 55vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.navItem {
+  display: flex;
+  margin: 2.5rem;
+  text-transform: uppercase;
+}
+
+.hiddenNav {
+  display: none !important;
+}
+
+.navNumber {
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.burger {
+  width: 2rem;
+  height: 2rem;
+}
+
+.hiddenBurger {
+  display: none;
+}
+
+.crossNav {
+  align-self: flex-end;
+  margin-bottom: 1.5rem;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.navDestination {
+  font-size: 16px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none !important;
+  }
+
+  .crossNav {
+    display: none;
+  }
+
+  .navBar {
+    backdrop-filter: none;
+    display: flex !important;
+    flex-direction: row;
+    height: 100px;
+    background: #151923;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navItem {
+    margin: 0;
+    height: 100%;
+    align-items: center;
+  }
+
+  .navItem:hover {
+    border-bottom: 0.5rem solid hsla(0, 0%, 100%, 0.5);
+    height: 90%;
+    padding-top: 0.5rem;
+  }
+
+  .currentNavItem {
+    border-bottom: 0.5rem solid white;
+    height: 90%;
+    padding-top: 0.5rem;
+  }
+
+  .currentNavItem:hover {
+    border-bottom: 0.5rem solid white;
+    height: 90%;
+    padding-top: 0.5rem;
+  }
+
+  .navNumber {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navNumber {
+    display: block;
+  }
+
+  .topBar {
+    padding-right: 0;
+  }
+
+  .deskBar {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 32%;
+    top: 80px;
+    left: 10%;
+    border-bottom: 1px;
+  }
+
+  .navBar {
+    backdrop-filter: blur(15px);
+    background-color: #15192377;
+    position: initial;
+    padding: 0 2rem;
+  }
+}

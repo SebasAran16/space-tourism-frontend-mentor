@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  color: #d0d6f9;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+* {
+  font-weight: 400;
+}
+
+p {
+  font-size: 15px;
+  text-align: center;
+  line-height: 2rem;
+  max-width: 400px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bellefair", serif;
+  color: #ffff;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 100px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 56px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 18px;
+  letter-spacing: 4.75px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+nav {
+  letter-spacing: 2.7px;
+  backdrop-filter: blur(40px);
+  width: 60vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+}
+
+button {
+  font-family: "Bellefair", serif;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 150px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  p {
+    font-size: 18px;
+  }
+}

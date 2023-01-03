@@ -1,0 +1,236 @@
+.mainContainer {
+  background-image: url("/assets/crew/background-crew-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 71.2px 40px 1fr;
+  padding: 1.5rem;
+}
+
+.crewContainer {
+  grid-area: 3 / 1 / -1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crewContainer * {
+  margin-bottom: 1rem;
+}
+
+.imgLine {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.memImage {
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+.destPick {
+  grid-area: 2 / 1 / 3 / -1;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+.destPick h5 {
+  margin-right: 0.7rem;
+}
+
+.pickNumber {
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.mCrew {
+  font-size: 16px;
+}
+
+.destinationsChooser {
+  display: flex;
+  justify-items: center;
+  width: 40%;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.chooser {
+  border-radius: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: gray;
+}
+
+.chooser:hover {
+  background-color: lightgrey;
+  opacity: 0.8;
+}
+
+.currentChooser {
+  background-color: #fff;
+}
+
+.currentChooser:hover {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.memInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.memInfo * {
+  margin: 0;
+}
+
+.memDescription {
+  margin-top: 1rem;
+}
+
+.memName {
+  font-size: 24px;
+}
+
+.role {
+  font-size: 16px;
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .mainContainer {
+    background-image: url(/assets/crew/background-crew-tablet.jpg);
+    grid-template-rows: 71.2px 100px 1fr;
+    padding-bottom: 0;
+  }
+
+  .crewContainer {
+    justify-content: space-between;
+  }
+
+  .destPick {
+    justify-self: flex-start;
+    align-self: center;
+    order: 1;
+  }
+
+  .memDescription {
+    order: 2;
+    margin: 0;
+  }
+
+  .crewContainer p {
+    order: 3;
+    margin: 0;
+  }
+
+  .destinationsChooser {
+    order: 4;
+  }
+
+  .imgLine {
+    order: 5;
+    align-content: flex-end;
+    align-self: flex-end;
+    margin: 0;
+    border: none;
+  }
+
+  .memImage {
+    width: 500px;
+    height: 500px;
+  }
+
+  .memName {
+    font-size: 40px;
+  }
+
+  .role {
+    font-size: 24px;
+  }
+
+  .pickNumber {
+    font-size: 20px;
+  }
+
+  .mCrew {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mainContainer {
+    background-image: url(/assets/crew/background-crew-desktop.jpg);
+    grid-template-rows: 100px 100px 1fr;
+    padding-left: 10%;
+  }
+
+  .crewContainer {
+    display: grid;
+    grid-area: 2 / 1 / -1 / -1;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 132px 1fr 1fr;
+    height: 100%;
+  }
+
+  .imgLine {
+    grid-area: 1 / 2 / -1 / -1;
+    height: 95%;
+  }
+
+  .memImage {
+    align-self: flex-end;
+    height: 95%;
+  }
+
+  .destPick {
+    align-self: center;
+  }
+
+  .memDescription {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-right: 10%;
+    margin: 0;
+  }
+
+  .memDescription p {
+    text-align: start;
+    margin-bottom: 0;
+  }
+
+  .memInfo {
+    align-items: flex-start;
+  }
+
+  .destinationsChooser {
+    grid-area: 3 / 1 / -2 / 2;
+    align-self: start;
+    margin-top: 5rem;
+    margin-left: 0;
+    justify-content: space-between;
+  }
+
+  .memImage {
+    margin: 0;
+  }
+
+  .pickNumber {
+    font-size: 28px;
+  }
+
+  .mCrew {
+    font-size: 28px;
+  }
+}

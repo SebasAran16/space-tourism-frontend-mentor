@@ -1,0 +1,215 @@
+.mainContainer {
+  background-image: url("/assets/technology/background-technology-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 71.2px 40px 1fr;
+  padding-top: 1.5rem;
+}
+
+.techContainer {
+  grid-area: 3 / 1 / -1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  margin-bottom: 10%;
+}
+
+.devImg {
+  width: 100vw;
+  overflow: hidden;
+  height: 35%;
+  margin: 0.7rem 0;
+}
+
+.techContainer p {
+  line-height: 1.9rem;
+}
+
+.title {
+  display: flex;
+  grid-area: 2 / 1 / 3 / -1;
+  align-self: center;
+  justify-self: center;
+}
+
+.title h5 {
+  margin-right: 0.7rem;
+}
+
+.titleNumber {
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.tContent {
+  font-size: 16px;
+}
+
+.destinationsChooser {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.chooser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 5%;
+}
+
+.chooser:hover {
+  border: 1px solid white;
+}
+
+.currentChooser {
+  border: none;
+  background-color: white;
+  color: #0b0d17;
+}
+
+.currentChooser:hover {
+  border: none;
+}
+
+.devInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.devInfo * {
+  margin: 0;
+}
+
+.devDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.terminology {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.devName {
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .mainContainer {
+    background-image: url(/assets/technology/background-technology-tablet.jpg);
+    grid-template-rows: 71.2px 100px 1fr;
+  }
+
+  .title {
+    justify-self: flex-start;
+    align-self: center;
+    margin-left: 1.5rem;
+  }
+
+  .devImg {
+    height: 32%;
+  }
+
+  .chooser {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .terminology {
+    font-size: 16px;
+    margin-top: 2rem;
+  }
+
+  .devName {
+    font-size: 40px;
+  }
+
+  .tContent {
+    font-size: 20px;
+  }
+
+  .titleNumber {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mainContainer {
+    background-image: url(/assets/technology/background-technology-desktop.jpg);
+    grid-template-rows: 100px 100px 1fr;
+    padding-left: 10%;
+
+    overflow-x: hidden;
+  }
+
+  .destinationsChooser {
+    flex-direction: column;
+    height: 65%;
+    justify-content: space-between;
+  }
+
+  .chooser {
+    justify-self: flex-end;
+    margin-right: 0;
+  }
+
+  .techContainer {
+    flex-direction: column;
+  }
+
+  .techContent {
+    display: flex;
+    margin-right: 0;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .devImg {
+    order: 3;
+    height: 60vh;
+    margin: 0;
+    align-self: flex-end;
+    max-width: 600px;
+    width: 45%;
+  }
+
+  .devDescription {
+    flex-grow: 1;
+    margin-left: 10%;
+    align-items: flex-start;
+  }
+
+  .devDescription p {
+    text-align: start;
+  }
+
+  .devInfo {
+    align-items: flex-start;
+  }
+
+  .title {
+    align-self: center;
+    margin-left: 0;
+  }
+
+  .titleNumber {
+    font-size: 28px;
+  }
+
+  .tContent {
+    font-size: 28px;
+  }
+}
